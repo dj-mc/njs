@@ -1,0 +1,5 @@
+/.conf/*
+/.secrets/*
+/.vscode/*
+/node_modules/*
+*.env

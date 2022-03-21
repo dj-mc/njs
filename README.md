@@ -1,11 +1,6 @@
 # node-eg
 
-More (unorganized) notes on how to build servers with nodejs.
-
-## debug node.js
-
-`debugger;` in your code.  
-`node inspect script.js` in the cl.
+Notes on how to build servers with nodejs.
 
 ## dotenv
 
@@ -16,14 +11,6 @@ Get your secrets with
 `import dotenv from 'dotenv';`  
 `dotenv.config();`  
 `let secret = process.env.SECRET;`
-
-## reclaim node web server port
-
-Get the process id  
-`lsof -t -i:8080` then `kill -9 <pid>`  
-One-liner: `kill -9 $(lsof -t -i:8080)`  
-Or kill node's process  
-`pkill -f node`
 
 ## --experimental-json-modules
 

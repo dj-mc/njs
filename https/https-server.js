@@ -6,7 +6,7 @@ const cnf = dotenv.config();
 if (cnf.error) {
   throw cnf.error;
 }
-console.log(cnf.parsed);
+
 const PORT = process.env.PORT;
 
 const app = (req, res) => {
@@ -14,6 +14,6 @@ const app = (req, res) => {
   res.end("What's up?");
 };
 
-export default https.createServer(https_options, app).listen(PORT, () => {
+https.createServer(https_options, app).listen(PORT, () => {
   console.log('Listening on %s', PORT);
 });

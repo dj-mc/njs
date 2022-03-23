@@ -3,7 +3,7 @@
 SECRET_DIR=.secrets/
 
 if [ ! -d "$SECRET_DIR" ]; then
-    mkdir $SECRET_DIR
+    mkdir -p $SECRET_DIR
     echo "Made secret directory"
 else
     echo "Secret directory already exists"

@@ -3,7 +3,7 @@
 CONF_DIR=.conf/
 
 if [ ! -d "$CONF_DIR" ]; then
-    mkdir $CONF_DIR
+    mkdir -p $CONF_DIR
     echo "Made ${CONF_DIR} directory"
 else
     echo "${CONF_DIR} directory already exists"

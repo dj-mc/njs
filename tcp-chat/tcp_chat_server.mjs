@@ -1,14 +1,20 @@
 import net from 'net';
 
+const chat_clients = [];
 const chat_server = net.createServer();
 
 chat_server.on('connection', function (client) {
-  client.write('Client connected');
+  chat_clients.push(client);
+  client.write(`${client} connected`);
+
   client.on('data', function (data) {
-    console.log(data);
+    chat_clients.forEach((chatter) => {
+      chatter.write(data);
+    });
   });
+
   client.on('close', function () {
-    client.write('Client closed\n');
+    client.write(`${client} closed`);
     client.end();
   });
 });

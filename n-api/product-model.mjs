@@ -1,5 +1,5 @@
 import db from './products.db.json';
-import { write_to_json } from './utils.js';
+import { write_to_json } from './utils.mjs';
 import { v4 as uuidv4 } from 'uuid';
 
 export default class Product {

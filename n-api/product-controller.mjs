@@ -1,5 +1,5 @@
-import Product from './product-model.js';
-import { get_post_data } from './utils.js';
+import Product from './product-model.mjs';
+import { get_post_data } from './utils.mjs';
 
 export default class ProductController {
   constructor() {}

@@ -1,5 +1,5 @@
 import http from 'http';
-import ProductController from './product-controller.js';
+import ProductController from './product-controller.mjs';
 
 const server = http.createServer((req, res) => {
   console.log('A get request will hang until responded to,');

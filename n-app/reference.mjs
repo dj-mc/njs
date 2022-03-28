@@ -3,7 +3,7 @@ import { readFile, readFileSync } from 'fs';
 import { readFile as rf } from 'fs/promises';
 
 async function wrap() {
-  // Top-level await in node v14.3.0+ (not recommended)
+  // Top-level await in node v14.3.0+
   // Otherwise wrap in an async function
   const my_file = await rf('./txt.txt', 'utf-8');
   console.log(`Top-level await:\n${my_file}`);

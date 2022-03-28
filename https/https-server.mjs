@@ -1,5 +1,5 @@
 import https from 'https';
-import { https_options } from './https-options.js';
+import { https_options } from './https-options.mjs';
 import dotenv from 'dotenv';
 
 const cnf = dotenv.config();

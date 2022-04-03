@@ -1,4 +1,4 @@
-# node-eg
+# njs
 
 Notes on how to build servers with nodejs.
 

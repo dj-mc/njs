@@ -1,13 +1,7 @@
 import https from 'https';
 import { https_options } from './https-options.mjs';
-import dotenv from 'dotenv';
 
-const cnf = dotenv.config();
-if (cnf.error) {
-  throw cnf.error;
-}
-
-const PORT = process.env.PORT;
+const PORT = process.env.npm_package_config_port || 8080
 
 const app = (req, res) => {
   res.writeHead(200, { 'content-type': 'text/html' });

@@ -1,11 +1,12 @@
 import express from 'express';
 import urlencoded from 'body-parser/lib/types/urlencoded.js';
 
-const user_posts = [];
 const app = express();
+const user_posts = [];
+
+app.listen(9006);
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
-app.listen(9006);
 
 app.get('/', (req, res) => {
   res.send('Welcome to Zeta');
@@ -21,6 +22,6 @@ app.post('/send', urlencoded({ extended: true }), (req, res) => {
   }
 });
 
-app.get('/latest', (req, res) => {
+app.get('/user_posts', (req, res) => {
   res.send(user_posts);
 });

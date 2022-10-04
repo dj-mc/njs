@@ -9,7 +9,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
 app.get('/', (req, res) => {
-  res.send('Welcome to Zeta');
+  res.send('tiny blog');
 });
 
 app.post('/send', urlencoded({ extended: true }), (req, res) => {

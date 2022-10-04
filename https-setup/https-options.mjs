@@ -7,8 +7,8 @@ const __dirname = path.dirname(__filename);
 import fs from 'fs';
 
 const https_options = {
-  key: fs.readFileSync(path.resolve(__dirname, '../https/.conf/private_server_key.pem')),
-  cert: fs.readFileSync(path.resolve(__dirname, '../https/.conf/cert.pem'))
+  key: fs.readFileSync(path.resolve(__dirname, '../https-setup/.conf/private_server_key.pem')),
+  cert: fs.readFileSync(path.resolve(__dirname, '../https-setup/.conf/cert.pem'))
 };
 
 console.log(https_options);
